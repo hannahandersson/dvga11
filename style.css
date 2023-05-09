@@ -28,10 +28,55 @@ body{
 }
 
 h2{
-    width:100%;
+    width:30%;
+    text-align: center;
+    background-color: rgb(64, 64, 144);
+    color: black;
+    margin-left: 10px;
+    
 }
 
 
 ul{
     display: none;
+}
+
+.sort{
+    font-size: 23px;
+    width: 100% ;
+}
+
+#menu{
+    width:50%;
+}
+
+h1{
+    width: 100%;
+    margin-left: 10px;
+    
+}
+
+#klass1{
+    margin-bottom: 20px;
+}
+
+#klass2{
+    margin-bottom: 20px;
+}
+
+#klass3{
+    margin-bottom: 20px;
+}
+
+#sauce{
+    margin-bottom: 20px;
+}
+
+#dryck{
+    margin-bottom: 20px;
+}
+
+#kvitto{
+    font-size: 18px;
+    padding:15px;
 }
