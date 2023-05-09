@@ -1,3 +1,5 @@
+'use strict';
+
 var menu = {
 	"Pizzor klass 1": [
 		{"name": "Margherita", "contents": ["Tomatsås", "Ost"], "price": 65 },
@@ -152,8 +154,67 @@ menu["Dryck"].forEach(function(drink){
 
 });
 
-$(document).ready(function(){
+const knapp1 = document.querySelector("#p1");
+const item1 = document.querySelector("#pizza1");
 
+knapp1.addEventListener('click', function(){
+	if(item1.style.display === 'block') {
+		item1.style.display = 'none';
+	} else{
+		item1.style.display = 'block';
+	}
+
+
+});
+
+const knapp2 = document.querySelector("#p2");
+const item2 = document.querySelector("#pizza2");
+
+knapp2.addEventListener('click', function(){
+	if(item2.style.display === 'block') {
+		item2.style.display = 'none';
+	} else{
+		item2.style.display = 'block';
+	}
+
+
+});
+
+const knapp3 = document.querySelector("#p3");
+const item3 = document.querySelector("#pizza3");
+
+knapp3.addEventListener('click', function(){
+	if(item3.style.display === 'block') {
+		item3.style.display = 'none';
+	} else{
+		item3.style.display = 'block';
+	}
+
+
+});
+
+const knapp4 = document.querySelector("#p4");
+const item4 = document.querySelector("#sas");
+
+knapp4.addEventListener('click', function(){
+	if(item4.style.display === 'block') {
+		item4.style.display = 'none';
+	} else{
+		item4.style.display = 'block';
+	}
+
+
+});
+
+const knapp5 = document.querySelector("#p5");
+const item5 = document.querySelector("#drink");
+
+knapp5.addEventListener('click', function(){
+	if(item5.style.display === 'block') {
+		item5.style.display = 'none';
+	} else{
+		item5.style.display = 'block';
+	}
 
 
 });
