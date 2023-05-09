@@ -17,7 +17,7 @@ var menu = {
 		{"name": "Napoli", "contents": ["Tomatsås", "Ost", "Räkor", "Champinjoner" ], "price": 70 }
 	],
 	"Pizzor klass 3": [
-		{"name": "Bravo", "contents": ["Tomatsås", "Ost", "Skinka", "Bacon", "Lök", "a:Ägg" ], "price": 75 },
+		{"name": "Bravo", "contents": ["Tomatsås", "Ost", "Skinka", "Bacon", "Lök", "a:Ägg"], "price": 75 },
 		{"name": "Princessa", "contents": ["Tomatsås", "Ost", "Skinka", "a:Räkor", "Champinjoner" ], "price": 75 },
 		{"name": "Kroppkärr", "contents": ["Tomatsås", "Ost", "Skinka", "Köttfärs", "Champinjoner" ], "price": 75 },
 		{"name": "Afrikano", "contents": ["Tomatsås", "Ost", "Skinka", "Ananas", "Curry", "Banan" ], "price": 75 },
@@ -67,11 +67,8 @@ menu["Pizzor klass 1"].forEach(function(pizza){
 	price.className = "pris";
 	price.textContent = pizza.price + " kr";
 
-	
-	if(pizza.contents.includes("a:")){
-		content.textContent = pizza.contents.replace("a:", "");
-		content.classList.add("bold");
-	}
+  
+
 
 	listItem.appendChild(name);
 	listItem.appendChild(content);
@@ -79,7 +76,10 @@ menu["Pizzor klass 1"].forEach(function(pizza){
 	
 
 	document.querySelector("#pizza1").appendChild(listItem);
-
+    
+    listItem.addEventListener('click', function() {
+        addToOrder(pizza);
+    });
 });
 
 menu["Pizzor klass 2"].forEach(function(pizza){
@@ -98,13 +98,18 @@ menu["Pizzor klass 2"].forEach(function(pizza){
 	price.className = "pris";
 	price.textContent = pizza.price + " kr";
 
+    
+
 	listItem.appendChild(name);
 	listItem.appendChild(content);
 	listItem.appendChild(price);
 	
 
 	document.querySelector("#pizza2").appendChild(listItem);
-
+    
+    listItem.addEventListener('click', function() {
+        addToOrder(pizza);
+      });
 });
 
 menu["Pizzor klass 3"].forEach(function(pizza){
@@ -123,13 +128,18 @@ menu["Pizzor klass 3"].forEach(function(pizza){
 	price.className = "pris";
 	price.textContent = pizza.price + " kr";
 
+    
+
 	listItem.appendChild(name);
 	listItem.appendChild(content);
 	listItem.appendChild(price);
 	
 
 	document.querySelector("#pizza3").appendChild(listItem);
-
+    
+    listItem.addEventListener('click', function() {
+            addToOrder(pizza);
+        });
 });
 
 menu["Såser"].forEach(function(sauce){
@@ -144,12 +154,15 @@ menu["Såser"].forEach(function(sauce){
 	price.className = "pris";
 	price.textContent = sauce.price + " kr";
 
-	listItem.appendChild(name);
+    listItem.appendChild(name);
 	listItem.appendChild(price);
-	
+
 
 	document.querySelector("#sas").appendChild(listItem);
-
+    
+    listItem.addEventListener('click', function() {
+        addToOrder(sauce);
+      });
 });
 
 menu["Dryck"].forEach(function(drink){
@@ -164,17 +177,28 @@ menu["Dryck"].forEach(function(drink){
 	price.className = "pris";
 	price.textContent = drink.price + " kr";
 
+    
+
 	listItem.appendChild(name);
 	listItem.appendChild(price);
-	
 
 	document.querySelector("#drink").appendChild(listItem);
-
+    
+    listItem.addEventListener('click', function() {
+        addToOrder(drink);
+      });
 });
+
+function addToOrder(item) {
+    let listItem = document.createElement("li");
+    listItem.textContent = item.name + item.contents + item.price;
+  
+
+    document.querySelector("#order-list").appendChild(listItem);
+  }
 
 const knapp1 = document.querySelector("#p1");
 const item1 = document.querySelector("#pizza1");
-
 knapp1.addEventListener('click', function(){
 	if(item1.style.display === 'block') {
 		item1.style.display = 'none';
