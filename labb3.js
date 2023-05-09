@@ -53,14 +53,18 @@ var menu = {
 
 menu["Pizzor klass 1"].forEach(function(pizza){
 	let listItem = document.createElement("li");
+	listItem.className = "lista";
 
 	let name = document.createElement("span");
-	name.textContent = pizza.name;
+	name.className = "sort";
+	name.textContent = pizza.name + ":" + " ";
 
 	let content = document.createElement("span");
+	content.className = "inneholl";
 	content.textContent = pizza.contents + " ";
 
 	let price = document.createElement("span");
+	price.className = "pris";
 	price.textContent = pizza.price + " kr";
 
 	
@@ -80,14 +84,18 @@ menu["Pizzor klass 1"].forEach(function(pizza){
 
 menu["Pizzor klass 2"].forEach(function(pizza){
 	let listItem = document.createElement("li");
+	listItem.className = "lista";
 
 	let name = document.createElement("span");
-	name.textContent = pizza.name;
+	name.className = "sort";
+	name.textContent = pizza.name + ":" + " ";
 
 	let content = document.createElement("span");
+	content.className = "inneholl"
 	content.textContent = pizza.contents + " ";
 
 	let price = document.createElement("span");
+	price.className = "pris";
 	price.textContent = pizza.price + " kr";
 
 	listItem.appendChild(name);
@@ -101,14 +109,18 @@ menu["Pizzor klass 2"].forEach(function(pizza){
 
 menu["Pizzor klass 3"].forEach(function(pizza){
 	let listItem = document.createElement("li");
+	listItem.className = "lista";
 
 	let name = document.createElement("span");
-	name.textContent = pizza.name;
+	name.className = "sort";
+	name.textContent = pizza.name + ":" + " ";
 
 	let content = document.createElement("span");
+	content.className = "inneholl";
 	content.textContent = pizza.contents + " ";
 
 	let price = document.createElement("span");
+	price.className = "pris";
 	price.textContent = pizza.price + " kr";
 
 	listItem.appendChild(name);
@@ -122,11 +134,14 @@ menu["Pizzor klass 3"].forEach(function(pizza){
 
 menu["Såser"].forEach(function(sauce){
 	let listItem = document.createElement("li");
+	listItem.className = "lista";
 
 	let name = document.createElement("span");
+	name.className = "sort";
 	name.textContent = sauce.name;
 
 	let price = document.createElement("span");
+	price.className = "pris";
 	price.textContent = sauce.price + " kr";
 
 	listItem.appendChild(name);
@@ -139,11 +154,14 @@ menu["Såser"].forEach(function(sauce){
 
 menu["Dryck"].forEach(function(drink){
 	let listItem = document.createElement("li");
+	listItem.className = "lista";
 
 	let name = document.createElement("span");
+	name.className = "sort";
 	name.textContent = drink.name;
 
 	let price = document.createElement("span");
+	price.className = "pris";
 	price.textContent = drink.price + " kr";
 
 	listItem.appendChild(name);
