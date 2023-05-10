@@ -190,11 +190,53 @@ menu["Dryck"].forEach(function(drink){
 });
 
 function addToOrder(item) {
-    let listItem = document.createElement("li");
-    listItem.textContent = item.name + item.contents + item.price;
-  
+	let listItem = document.createElement("li");
+	listItem.textContent = item.name + item.contents + item.price;
+  	listItem.setAttribute("data-name", item.name); 
+	listItem.setAttribute("data-price", item.price);
+	if (item.contents && item.price) {
+	  listItem.textContent = item.name + ": " + item.contents.join(", ") + " " + item.price + " kr";
+	} else {
+	  listItem.textContent = item.name + " " + item.price + " kr";
+	}
 
-    document.querySelector("#order-list").appendChild(listItem);
+	listItem.addEventListener('click', function() {
+		listItem.remove();
+	  });
+  
+	document.querySelector("#order-list").appendChild(listItem);
+  }
+
+  const kvittoKnapp = document.querySelector("#kvitto");
+
+  kvittoKnapp.addEventListener('click', function(){
+	generateReceipt();
+	clearOrder();
+  });
+  
+  function generateReceipt() {
+	const orderItems = document.querySelectorAll("#order-list li");
+  
+	let totalSumma = 0;
+	let receiptText = "Kvitto:\n";
+  
+	orderItems.forEach(function(item) {
+	  const name = item.getAttribute("data-name");
+	  const priceText = item.getAttribute("data-price");
+	  const price = parseInt(priceText);
+  
+	  totalSumma += price;
+  
+	  receiptText += name + " - " + price + " kr\n";
+	});
+  
+	receiptText += "Total summa: " + totalSumma + " kr";
+  
+	alert(receiptText);
+  }
+
+  function clearOrder() {
+	document.querySelector("#order-list").innerHTML = "";
   }
 
 const knapp1 = document.querySelector("#p1");
@@ -260,3 +302,4 @@ knapp5.addEventListener('click', function(){
 
 
 });
+
