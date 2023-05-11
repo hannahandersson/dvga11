@@ -210,14 +210,22 @@ function addToOrder(item) {
   const kvittoKnapp = document.querySelector("#kvitto");
 
   kvittoKnapp.addEventListener('click', function(){
+
+	const orderItems = document.querySelectorAll("#order-list li");
+
+	if(orderItems.length === 0) {
+		alert('Det ligger inga varor i beställningen!');
+	} else{
 	const notes = prompt("Noteringar på beställningen:");
 	
 	generateReceipt(notes);
 	clearOrder();
+	}
   });
   
   function generateReceipt(notes) {
 	const orderItems = document.querySelectorAll("#order-list li");
+
   	
 	let totalSumma = 0;
 	let receiptText = "Kvitto:\n";
@@ -236,14 +244,16 @@ function addToOrder(item) {
   
 	receiptText += "Total summa: " + totalSumma + " kr";
 
+	if (notes) {
+        receiptText += "\nNoteringar:\n" + notes;
+    }
+
 	let receiptList = document.createElement('li');
 	receiptList.textContent = receiptText;
 	let kvittoLista = document.querySelector('#kvittolista');
 	kvittoLista.appendChild(receiptList);
 	
-  if (notes) {
-        receiptText += "\nNoteringar:\n" + notes;
-    }
+ 
 	
 	alert(receiptText);
   }
@@ -329,3 +339,4 @@ kvittoknapp.addEventListener('click', function(){
 
 
 });
+
