@@ -231,6 +231,12 @@ function addToOrder(item) {
 	});
   
 	receiptText += "Total summa: " + totalSumma + " kr";
+
+	let receiptList = document.createElement('li');
+	receiptList.textContent = receiptText;
+	let kvittoLista = document.querySelector('#kvittolista');
+	kvittoLista.appendChild(receiptList);
+	
   
 	alert(receiptText);
   }
@@ -238,6 +244,8 @@ function addToOrder(item) {
   function clearOrder() {
 	document.querySelector("#order-list").innerHTML = "";
   }
+
+
 
 const knapp1 = document.querySelector("#p1");
 const item1 = document.querySelector("#pizza1");
@@ -303,3 +311,15 @@ knapp5.addEventListener('click', function(){
 
 });
 
+
+const kvittoknapp = document.querySelector("#store");
+const kvitton = document.querySelector("#kvittolista");
+kvittoknapp.addEventListener('click', function(){
+	if(kvitton.style.display === 'block') {
+		kvitton.style.display = 'none';
+	} else{
+		kvitton.style.display = 'block';
+	}
+
+
+});
