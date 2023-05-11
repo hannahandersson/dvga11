@@ -9,57 +9,54 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </head>
     <body>
-        <h1>Meny</h1>
-        <div id="menu">
+        <main>
+            <aside>
+            <h1>Meny</h1>
+            <div id="menu">
+                <div id="klass1">
+                    <h2 id="p1" class="border">Pizzor klass 1</h2>
+                        <ul id="pizza1" class="menylista"></ul>
+                </div>
 
-        <div id="klass1">
-            <h2 id="p1" class="border">Pizzor klass 1</h2>
-                <ul id="pizza1" class="menylista"></ul>
-        </div>
+                <div id="klass2">
+                    <h2 id="p2" class="border">Pizzor klass 2</h2>
+                        <ul id="pizza2" class="menylista"></ul>
+                </div>
 
-        <div id="klass2">
-        <h2 id="p2" class="border">Pizzor klass 2</h2>
-        <ul id="pizza2" class="menylista"></ul>
-        </div>
+                <div id="klass3">
+                    <h2 id="p3" class="border">Pizzor klass 3</h2>
+                        <ul id="pizza3" class="menylista"></ul>
+                </div>
 
-        <div id="klass3">
-            <h2 id="p3" class="border">Pizzor klass 3</h2>
-                <ul id="pizza3" class="menylista"></ul>
-        </div>
+                <div id="sauce">
+                    <h2 id="p4" class="border">Såser</h2>
+                        <ul id="sas" class="menylista"></ul>
+                </div>
 
-        <div id="sauce">
-            <h2 id="p4" class="border">Såser</h2>
-                <ul id="sas" class="menylista"></ul>
-        </div>
+                <div id="dryck">
+                    <h2 id="p5" class="border">Drycker</h2>
+                        <ul id="drink" class="menylista"></ul>
+                </div>
+            </div>
+            </aside>
 
-        <div id="dryck">
-            <h2 id="p5" class="border">Drycker</h2>
-                <ul id="drink" class="menylista"></ul>
-        </div>
-        
-        <h3>Beställning:</h3>
-        <div id="order">
-            <ul id="order-list"></ul>
-        </div>
-        
-      
-    
-        <input type="button" id="kvitto" value="Skriv ut kvitto">
-        <div id="total-summa"></div>
-
-
-        </div>
-
-        <div id="hsida">
-
-        <input type="button" id="store" value="Visa kvitton">
-
-        <ul id="kvittolista">
+            <article>
+            <h3>Beställning:</h3>
+            <div id="order">
+                <ul id="order-list"></ul>
+            </div>
             
-        </ul>
-
-        </div>
-
+                <section>
+                <div>
+                <input type="button" id="kvitto" value="Skriv ut kvitto">
+                <div id="total-summa"></div>
+                <input type="button" id="store" value="Visa kvitton">
+                    <ul id="kvittolista"></ul>
+                </div>
+                </section>
+                
+            </article>
+        </main>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="labb3.js"></script>
      </body>
