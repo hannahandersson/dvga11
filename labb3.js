@@ -9,7 +9,7 @@ var menu = {
 	"Pizzor klass 2": [
 		{"name": "Calzone", "contents": ["Tomatsås", "Ost", "Skinka"], "price": 80 },
 		{"name": "Capricciosa", "contents": ["Tomatsås", "Ost", "Skinka", "Champinjoner" ], "price": 70 },
-		{"name": "Tomaso", "contents": ["Tomatsås", "Ost", "Skinka", "a:Räkor" ], "price": 70 },
+		{"name": "Tomaso", "contents": ["Tomatsås", "Ost", "Skinka", "ALLERGI:Räkor" ], "price": 70 },
 		{"name": "Hawaii", "contents": ["Tomatsås", "Ost", "Skinka", "Ananas" ], "price": 70 },
 		{"name": "Oriental", "contents": ["Tomatsås", "Ost", "Skinka", "Köttfärs" ], "price": 70 },
 		{"name": "Venezia", "contents": ["Tomatsås", "Ost", "Skinka", "Tonfisk" ], "price": 70 },
@@ -17,19 +17,19 @@ var menu = {
 		{"name": "Napoli", "contents": ["Tomatsås", "Ost", "Räkor", "Champinjoner" ], "price": 70 }
 	],
 	"Pizzor klass 3": [
-		{"name": "Bravo", "contents": ["Tomatsås", "Ost", "Skinka", "Bacon", "Lök", "a:Ägg"], "price": 75 },
-		{"name": "Princessa", "contents": ["Tomatsås", "Ost", "Skinka", "a:Räkor", "Champinjoner" ], "price": 75 },
+		{"name": "Bravo", "contents": ["Tomatsås", "Ost", "Skinka", "Bacon", "Lök", "ALLERGI:Ägg"], "price": 75 },
+		{"name": "Princessa", "contents": ["Tomatsås", "Ost", "Skinka", "ALLERGI:Räkor", "Champinjoner" ], "price": 75 },
 		{"name": "Kroppkärr", "contents": ["Tomatsås", "Ost", "Skinka", "Köttfärs", "Champinjoner" ], "price": 75 },
 		{"name": "Afrikano", "contents": ["Tomatsås", "Ost", "Skinka", "Ananas", "Curry", "Banan" ], "price": 75 },
-		{"name": "Önska", "contents": ["Tomatsås", "Ost", "Skinka", "a:Räkor", "Champinjoner" ], "price": 85 },
-		{"name": "Lambada", "contents": ["Tomatsås", "Ost", "Skinka", "Köttfärs", "a:Räkor" ], "price": 75 },
-		{"name": "Alsterdalen", "contents": ["Tomatsås", "Ost", "Skinka", "a:Crabfish", "a:Räkor" ], "price": 75 },
-		{"name": "Paradis", "contents": ["Tomatsås", "Ost", "Skinka", "a:Räkor", "Ananas" ], "price": 75 },
+		{"name": "Önska", "contents": ["Tomatsås", "Ost", "Skinka", "ALLERGO:Räkor", "Champinjoner" ], "price": 85 },
+		{"name": "Lambada", "contents": ["Tomatsås", "Ost", "Skinka", "Köttfärs", "ALLERGI:Räkor" ], "price": 75 },
+		{"name": "Alsterdalen", "contents": ["Tomatsås", "Ost", "Skinka", "ALLERGI:Crabfish", "ALLERGI:Räkor" ], "price": 75 },
+		{"name": "Paradis", "contents": ["Tomatsås", "Ost", "Skinka", "ALLERGI:Räkor", "Ananas" ], "price": 75 },
 		{"name": "Roma", "contents": ["Tomatsås", "Ost", "Skinka", "Kantareller", "Tomater (färska)" ], "price": 75 },
 		{"name": "Banjogatan", "contents": ["Tomatsås", "Ost", "Skinka", "Salami", "Paprika" ], "price": 75 },
 		{"name": "Rimini", "contents": ["Tomatsås", "Ost", "Köttfärs", "Gorgonzolaost", "Lök" ], "price": 75 },
 		{"name": "Opera", "contents": ["Tomatsås", "Ost", "Köttfärs", "Ananas", "Curry", "Banan" ], "price": 75 },
-		{"name": "Mesopotamia", "contents": ["Tomatsås", "Ost", "Salami", "Köttfärs", "a:Nötter"], "price": 75 }
+		{"name": "Mesopotamia", "contents": ["Tomatsås", "Ost", "Salami", "Köttfärs", "ALLERGI:Nötter"], "price": 75 }
 	],
 	"Såser": [
 		{"name": "Bearnaisesås 10 cl ", "price":  10 },
@@ -339,4 +339,3 @@ kvittoknapp.addEventListener('click', function(){
 
 
 });
-
